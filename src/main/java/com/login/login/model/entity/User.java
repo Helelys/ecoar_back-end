@@ -3,6 +3,8 @@ package com.login.login.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Table(name = "user")
 @Entity
 @Getter
@@ -21,4 +23,10 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    @Column(name = "reset_token")
+    private String resetToken;
+
+    @Column(name = "date_time")
+    private LocalDateTime dateTime;
 }
