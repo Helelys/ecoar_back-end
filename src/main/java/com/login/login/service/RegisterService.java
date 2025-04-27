@@ -14,7 +14,7 @@ public class RegisterService {
     private final PasswordEncoder passwordEncoder;
 
     public void registerUser(String email, String password) {
-        User user = new User(null, email, passwordEncoder.encode(password));
+        User user = new User(null, email, passwordEncoder.encode(password), null, null);
         userRepository.save(user);
     }
 }
